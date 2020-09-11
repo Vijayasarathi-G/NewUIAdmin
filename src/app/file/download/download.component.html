@@ -1,0 +1,35 @@
+<div>
+  <h2 style="color: blue;">File Download </h2>
+  <div class="panel panel-primary">
+      <div id="demo">
+
+      <div class="table-responsive-vertical shadow-z-1">
+        <!-- Table starts here -->
+        <table id="table" class="table table-hover table-mc-light-blue">
+          <thead>
+          <tr>
+            <th>ID</th>
+            <th>File Name</th>
+            <th>Action</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr *ngFor="let file of fileUploads  | async;let i=index;">
+            <td data-title="ID">{{i + 1}}</td>
+            <td data-title="Name">{{file}}</td>
+            <td data-title="Link">
+              <a href="http://localhost:8080/api/file/get/{{file}}">Download</a>
+            </td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- <div *ngFor="let file of fileUploads | async">
+       <div class="panel-body">
+         <a href="http://localhost:8080/api/file/get/{{file}}">{{file}}</a>
+       </div>
+     </div>-->
+  </div>
+</div>

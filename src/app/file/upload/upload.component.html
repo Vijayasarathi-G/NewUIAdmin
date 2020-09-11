@@ -1,0 +1,18 @@
+<h2>File Upload</h2>
+<!-- Upload  -->
+<form id="file-upload-form" class="uploader">
+  <input id="file-upload" type="file" name="fileUpload" (change)="selectFile($event)" />
+  <label for="file-upload" id="file-drag">
+    <div id="start" *ngIf="!currentFileUpload">
+      <i class="fa fa-upload" aria-hidden="true"></i>
+      <div>Select a file</div>
+      <span id="file-upload-btn" class="btn btn-primary">Select a file</span>
+    </div>
+    <div *ngIf="currentFileUpload" class="progress">
+      <div>{{currentFileUpload.name}}</div>
+      <div class="progress-bar progress-bar-info progress-bar-striped" role="progressbar" attr.aria-valuenow="{{progress.percentage}}"
+           aria-valuemin="0" aria-valuemax="100" [ngStyle]="{width:progress.percentage+'%'}">
+        {{progress.percentage}}%</div>
+    </div>
+  </label>
+</form>

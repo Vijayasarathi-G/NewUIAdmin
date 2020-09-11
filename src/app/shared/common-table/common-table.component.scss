@@ -1,0 +1,20 @@
+table {
+  margin: 10px;
+  width: 98% !important;
+}
+
+.scroll-container {
+  position: relative;
+}
+
+.scrollable-content {
+  padding: 16px;
+  margin: 0;
+}
+perfect-scrollbar.scroll-container {
+  max-height: 450px;
+}
+
+::ng-deep   .ps__rail-x {
+  display: none;
+}
